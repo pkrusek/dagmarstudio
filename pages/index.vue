@@ -4,7 +4,6 @@ const navigation = [
   {name: 'Caricatures', href: '#', current: true},
   {name: 'Art Lessons', href: '#', current: false},
   {name: 'Projects', href: '#', current: false},
-  {name: 'Calendar', href: '#', current: false},
   {name: 'Contact', href: '#', current: false},
 ]
 </script>
@@ -46,7 +45,7 @@ const navigation = [
                   md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0
                "
         >
-          <li v-for="item in navigation" :key="item.name">{{ item.name }}</li>
+          <li v-for="item in navigation" :key="item.name"><a :href="item.href">{{ item.name }}</a></li>
         </ul>
       </nav>
 
